@@ -345,5 +345,115 @@ All returned responses are strings that can be parsed in to JSON as per the API 
 
     storage.delete (storageId, callback);
 
+### cluster
+
+  getFirewall (callback);
+
+  getResources (callback);
+
+  getTasks (callback);
+
+  getOptions (callback);
+
+  updateOptions (data, callback);
+
+  getStatus (callback);
+
+  getNextid (callback);
+
+### lxc
+
+  lxc.get(node, callback);
+
+  lxc.create(node, data, callback);
+
+  lxc.getvm (node, vmid, callback);
+
+  lxc.deletevm (node, vmid, callback);
+
+  lxc.getConfig (node, vmid, callback);
+
+  lxc.putConfig (node, vmid, data, callback);
+
+  lxc.vmConfigResize (node, vmid, data, callback);
+
+  lxc.vmGetStatus (node, vmid, callback);
+
+  lxc.vmGetStatusCurrent (node, vmid, callback);
+
+  lxc.vmStart (node, vmid, data, callback);
+
+  lxc.vmStop (node, vmid, data, callback);
+
+  lxc.vmShutdown (node, vmid, data, callback);
+
+  lxc.vmSuspend (node, vmid, data, callback);
+
+  lxc.vmResume (node, vmid, data, callback);
+
+  lxc.vmListSnapshot (node, vmid, callback);
+
+  lxc.vmCreateSnapshot (node, vmid, data, callback);
+
+  lxc.vmGetSnapshot (node, vmid, snapname, callback);
+
+  lxc.vmDeleteSnapshot (node, vmid, snapname, callback);
+
+  lxc.vmSnapshotRollback (node, vmid, snapname, data, callback);
+
+  lxc.vmGetSnapshotConfig (node, vmid, snapname, callback);
+
+  lxc.vmPutSnapshotConfig (node, vmid, snapname, data, callback);
+
+  lxc.vmGetFirewall (node, vmid, callback);
+
+  lxc.vmGetFirewallRules (node, vmid, callback);
+
+  lxc.vmSetFirewallRules (node, vmid, data, callback);
+
+  lxc.vmGetFirewallRule (node, vmid, pos, callback);
+
+  lxc.vmSetFirewallRule (node, vmid, pos, data, callback);
+
+  lxc.vmDeleteFirewallRule (node, vmid, pos, callback);
+
+  lxc.vmGetFirewallAliases (node, vmid, callback);
+
+  lxc.vmSetFirewallAliases (node, vmid, data, callback);
+
+  lxc.vmGetFirewallAlias (node, vmid, name, callback);
+
+  lxc.vmSetFirewallAlias (node, vmid, name, data, callback);
+
+  lxc.vmDeleteFirewallAlias (node, vmid, name callback);
+
+  lxc.vmListFirewallIpset (node, vmid, callback);
+
+  lxc.vmCreateFirewallIpset (node, vmid, data, callback);
+
+  lxc.vmGetFirewallIpset (node, vmid, name, callback);
+
+  lxc.vmSetFirewallIpset (node, vmid, name, data, callback);
+
+  lxc.vmDeleteFirewallIpset (node, vmid, name, callback);
+
+  lxc.vmGetFirewallIpsetCidr (node, vmid, name, cidr, callback);
+
+  lxc.vmSetFirewallIpsetCidr (node, vmid, name, cidr, data, callback);
+
+  lxc.vmDeleteFirewallCidr (node, vmid, name, cidr, callback);
+
+  lxc.vmGetFirewallOptions (node, vmid, callback);
+
+  lxc.vmSetFirewallOptions (node, vmid, data, callback);
+
+  lxc.vmGetFirewallLog (node, vmid, callback);
+
+  lxc.vmGetFirewallRefs (node, vmid, callback);
+
+  lxc.vmGetFeature (node, vmid, callback);
+
+  lxc.vmSetTemplate (node, vmid, data, callback);
+
 ### To Do:
 completed tests, examples, documentation, add methods for pool, node, KVM
